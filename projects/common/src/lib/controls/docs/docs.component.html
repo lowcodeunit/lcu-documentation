@@ -1,13 +1,40 @@
-<mat-card docs id="docsCard{{card.DocsId}}" class="docs-card" (click)="SelectCard(card.Url)">
-    <mat-card-header>
-        <div mat-card-avatar class="docs-card-avatar">
-        <mat-icon color="primary">{{card.Icon}}</mat-icon>
-        </div>
-        <mat-card-title class="paragraph-title">{{card.Title}}</mat-card-title>
-        <mat-card-subtitle class="plain-text">{{card.Subtitle}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content class="docs-card-content">
-        {{card.Content}}
-    </mat-card-content>
-</mat-card>
-  
+<div fxLayout="row" *ngIf="Config">
+  <div fxFlex="0 1 auto">
+    <mat-tree [dataSource]="DataSource" [treeControl]="TreeControl">
+      <mat-tree-node
+        *matTreeNodeDef="let node"
+        matTreeNodeToggle
+        [matTreeNodePadding]="Config.IndentVariant * node.level"
+      >
+        <button mat-icon-button disabled></button>
+
+        <a mat-button (click)="GoToDoc(node.path)">{{ node.filename }}</a>
+      </mat-tree-node>
+
+      <mat-tree-node
+        *matTreeNodeDef="let node; when: HasChild"
+        [matTreeNodePadding]="Config.IndentVariant * node.level"
+      >
+        <button
+          mat-icon-button
+          matTreeNodeToggle
+          [attr.aria-label]="'toggle ' + node.filename"
+        >
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{ TreeControl.isExpanded(node) ? "expand_more" : "chevron_right" }}
+          </mat-icon>
+        </button>
+
+        <a mat-button matTreeNodeToggle>{{ node.filename }}</a>
+      </mat-tree-node>
+    </mat-tree>
+  </div>
+
+  <div fxFlex="auto">
+    <div class="push-right">
+      <ng-container *ngIf="!!ActiveDocData">
+        <markdown [src]="ActiveDocData"></markdown>
+      </ng-container>
+    </div>
+  </div>
+</div>
