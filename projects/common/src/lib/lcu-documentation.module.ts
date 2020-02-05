@@ -24,7 +24,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
       }
     })
   ],
-  exports: [LcuDocsComponent],
+  exports: [LcuDocsComponent, MarkdownModule],
   entryComponents: []
 })
 export class LcuDocumentationModule {
