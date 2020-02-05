@@ -3,5 +3,6 @@
   "dest": "../../dist/common",
   "lib": {
     "entryFile": "src/lcu.api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["ngx-markdown"]
 }
