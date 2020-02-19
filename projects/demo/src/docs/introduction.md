@@ -1,27 +1,13 @@
 # Introduction to LCUs
 
-Low Code Units (LCUs) are the building blocks that make up our Application. 
+Low Code Units (LCUs) are the building blocks that make up your Application. 
 
-## Development server
+## Fathym’s low-code IoT framework takes that complexity away.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Fathym’s low-code framework is designed to give developers the freedom and best practice workflows to rapidly create IoT and data-driven applications that are agnostic to tools, platforms and clouds. 
 
-## Code scaffolding
+Each element of the framework is built from Low Code Units (LCUs) – modular building blocks of code that can be as large as an application, or as small as a data visualization. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The framework drastically cuts down development time by applying and automating a set of best practices. The cloud infrastructure Fathym sits on is Microsoft Azure (and soon AWS and Google Cloud). You can set up an automated, enterprise-grade, Azure-hosted environment with just a few clicks. 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Developers can launch enterprise-scale solutions with all needed IoT infrastructure without any prior expertise in cloud provisioning. Organizations can customize their own frameworks to support their best practices and preferred tool sets. 
