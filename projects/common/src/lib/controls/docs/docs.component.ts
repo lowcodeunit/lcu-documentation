@@ -13,9 +13,9 @@ import {
   LcuMarkdownDoc
 } from '../../models/docs-config';
 import { isString } from 'util';
-import { join } from 'path-browserify';
+import { join } from 'path';
 import { FlatTreeControl } from '@angular/cdk/tree';
-import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material';
+import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material/tree';
 import { Observable, of as observableOf } from 'rxjs';
 import { MarkedOptions, MarkedRenderer } from 'ngx-markdown';
 

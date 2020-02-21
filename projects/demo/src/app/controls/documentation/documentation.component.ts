@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LcuMarkdownDocsConfig } from '@lowcodeunit/lcu-documentation-common';
 
 @Component({
   selector: 'lcu-documentation',
@@ -8,26 +7,12 @@ import { LcuMarkdownDocsConfig } from '@lowcodeunit/lcu-documentation-common';
 })
 export class DocumentationComponent implements OnInit {
 
-  public Config: LcuMarkdownDocsConfig;
+  public LocationRoot: string;
 
   constructor() {
-    this.Config = new LcuMarkdownDocsConfig(
-      {
-        DefaultDocPath: 'introduction.md',
-        Docs: [
-          {
-            Children: [],
-            Path: 'introduction.md',
-            Title: 'Introduction'
-          }
-        ],
-        LocationRoot: 'docs/'
-      }
-    );
+    this.LocationRoot = 'docs/';
   }
 
-  public ngOnInit(): void {
-
-  }
+  public ngOnInit(): void { }
 
 }
