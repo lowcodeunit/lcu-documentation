@@ -28,7 +28,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
   entryComponents: []
 })
 export class LcuDocumentationModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<LcuDocumentationModule> {
     return {
       ngModule: LcuDocumentationModule,
       providers: [DocsService]
