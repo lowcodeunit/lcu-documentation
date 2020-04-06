@@ -2,10 +2,10 @@
 	"name": "@lowcodeunit/lcu-documentation-common",
 	"version": "0.0.1",
 	"peerDependencies": {
-		"@angular/common": "^8.2.14",
-		"@angular/core": "^8.2.14"
+		"@angular/common": "^9.0.1",
+		"@angular/core": "^9.0.1"
   },
   "dependencies": {
-		"ngx-markdown": "^8.2.2"
+		"ngx-markdown": "^9.0.0"
   }
 }
