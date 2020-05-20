@@ -13,7 +13,6 @@ import {
   LcuMarkdownDoc
 } from '../../models/docs-config';
 import { isString } from 'util';
-import { join } from 'path';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material/tree';
 import { Observable, of as observableOf } from 'rxjs';
@@ -77,6 +76,8 @@ export function markedOptionsFactory(): MarkedOptions {
   return { renderer };
 }
 
+const path = require('path-browserify');
+
 @Component({
   selector: 'lcu-markdown-docs',
   templateUrl: './docs.component.html',
@@ -96,7 +97,7 @@ export class LcuDocsComponent implements OnInit {
   @Input('docs')
   public set Docs(docs: string) {
     this.http
-      .get(join(docs, 'lcu.docs.json'))
+      .get(path.join(docs, 'lcu.docs.json'))
       .subscribe((res: LcuMarkdownDocsConfig) => {
         this.Config = res;
         this.Reload();
@@ -216,7 +217,7 @@ export class LcuDocsComponent implements OnInit {
 
   protected calculateActiveDocData(): void {
     if (this.Config && this.ActiveDocPath) {
-      this.ActiveDocData = join(this.Config.LocationRoot, this.ActiveDocPath);
+      this.ActiveDocData = path.join(this.Config.LocationRoot, this.ActiveDocPath);
     } else {
       this.ActiveDocData = null;
     }
