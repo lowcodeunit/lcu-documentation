@@ -1,11 +1,11 @@
 import { Injectable, Injector } from '@angular/core';
-import { StateManagerContext } from '@lcu/common';
+import { StateContext } from '@lcu/common';
 import { DocsModel } from '../models/docs.model';
 
 @Injectable({
     providedIn: 'root'
 })
-export class DocsManagerContext extends StateManagerContext<DocsModel> {
+export class DocsManagerContext extends StateContext<DocsModel> {
 
     protected State: DocsModel;
 
@@ -23,12 +23,12 @@ export class DocsManagerContext extends StateManagerContext<DocsModel> {
             Type: 'get-docs-by-id'
         });
     }
-    
-    protected async loadStateKey() {
+
+    protected loadStateKey(): string {
         return 'main';
     }
 
-    protected async loadStateName() {
+    protected loadStateName(): string {
         return 'docs';
     }
 }
