@@ -12,7 +12,7 @@ import {
   LcuMarkdownDocChangeEvent,
   LcuMarkdownDoc
 } from '../../models/docs-config';
-import { isString } from 'util';
+// import { isString } from 'util';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material/tree';
 import { Observable, of as observableOf } from 'rxjs';
@@ -157,7 +157,7 @@ export class LcuDocsComponent implements OnInit {
   }
 
   public GoToDoc(docOpt: LcuMarkdownDoc | string): void {
-    const docPath = isString(docOpt)
+    const docPath = typeof docOpt === 'string'
       ? docOpt as string
       : (docOpt as LcuMarkdownDoc).Path;
 
