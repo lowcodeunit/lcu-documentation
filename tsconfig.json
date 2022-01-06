@@ -11,8 +11,9 @@
 		"moduleResolution": "node",
 		"importHelpers": true,
 		"target": "es2015",
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
+		"noImplicitAny": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"types": ["node"],
 		"typeRoots": [
 			"node_modules/@types"
 		],
