@@ -1,7 +1,7 @@
 {
 	"name": "@lowcodeunit/lcu-documentation-common",
 	"version": "0.0.1",
-  "dependencies": {
-		"ngx-markdown": "^10.1.1"
-  }
+	"allowNonPeerDependencies": {
+			"ngx-markdown": "^10.1.1"
+	}
 }
